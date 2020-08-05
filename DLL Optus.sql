@@ -30,7 +30,7 @@ GO
 CREATE TABLE Album(
 IdAlbum INT PRIMARY KEY IDENTITY NOT NULL,
 DataDeLancamento DATE NOT NULL,
-Localizacao VARCHAR(50) NOT NULL,
+Localizacao VARCHAR(50),
 QtdMinutos DECIMAL NOT NULL,
 Ativo VARCHAR(10) NOT NULL,
 IdArtista INT FOREIGN KEY REFERENCES Artistas(IdArtista) 
@@ -44,3 +44,4 @@ IdEstilo INT FOREIGN KEY REFERENCES Estilo(IdEstilo),
 IdAlbum INT FOREIGN KEY REFERENCES Album(IdAlbum) 
 );
 GO
+
